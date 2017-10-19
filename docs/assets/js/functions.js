@@ -195,7 +195,7 @@
             console.log($string);
             thisObject.typed({
                 strings: $string,
-                typeSpeed: 70
+                typeSpeed: 100
             });
         }, 1000);
     });

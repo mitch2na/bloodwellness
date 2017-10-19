@@ -182,20 +182,22 @@
                     src: '//www.youtube.com/embed/%id%?autoplay=1'
                 }
             },
-            srcAction: 'iframe_src',
+            srcAction: 'iframe_src'
         }
     });
 
     /* ------------------ TYPED SCRIPT ------------------ */
 
     $(".typed-text").each(function () {
-        var $string = $(this).data("typed-string") ? $(this).data("typed-string").split(",") : [];
-        console.log($string);
-        $(this).typed({
-            strings: $string,
-            typeSpeed: 60
-        });
-
+        var thisObject = $(this);
+        var $string = thisObject.data("typed-string") ? $(this).data("typed-string").split(",") : [];
+        setTimeout(function () {
+            console.log($string);
+            thisObject.typed({
+                strings: $string,
+                typeSpeed: 70
+            });
+        }, 1000);
     });
 
     $(".nav a").on("click", function () {

@@ -215,12 +215,15 @@
             var target = location.hash;
         }
 
-        $('html,body').animate(
-            {
-                scrollTop: $(target).offset().top
-            }, 2000, function () {
-                location.hash = target;
-            });
+        setTimeout(function () {
+            $('html,body').animate(
+                {
+                    scrollTop: $(target).offset().top
+                }, 2000, function () {
+                    location.hash = target;
+                });
+        }, 100);
+
 
     };
 

@@ -224,7 +224,7 @@
 
     };
 
-    $(document).load(function () {
+    $(window).load(function () {
         $('a[href^=\\#]').bind("click", jump);
 
         if (location.hash) {
